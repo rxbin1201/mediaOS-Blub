@@ -1,5 +1,5 @@
 
-#include <Boot/console.h>
+#include <Boot/Console/console.h>
 
 VOID clearScreen(VOID) {
     uefi_call_wrapper(ST->ConOut->ClearScreen, 1, ST->ConOut);
