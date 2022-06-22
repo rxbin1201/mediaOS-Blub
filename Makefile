@@ -19,4 +19,4 @@ $(BOOTLOADER_OBJECT_FILES): Build/Boot/%.o : Source/Boot/%.c
 .PHONY: bootloader
 bootloader: $(OBJECT_FILES)
 	mkdir -p $(OUTPUT_DIR)/EFI/BOOT/ && \
-	objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym -j .rel -j .rela -j .reloc --target=efi-app-x86_64 BOOTX64.SO $(OUTPUT_DIR)/EFI/BOOT/BOOTX64.EFI && \
+	objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym -j .rel -j .rela -j .reloc --target=efi-app-x86_64 BOOTX64.SO $(OUTPUT_DIR)/EFI/BOOT/BOOTX64.EFI
