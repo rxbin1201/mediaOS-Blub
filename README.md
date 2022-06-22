@@ -2,6 +2,9 @@
 
 mediaOS is designed to run on x86_64 systems and on arm64 systems.
 
+## Current State
+
+Developing the UEFI bootloader
 
 ## Features
 
