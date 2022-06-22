@@ -2,7 +2,7 @@
 #include <efi.h>
 #include <efilib.h>
 
-#include <Boot/Console/console.h>
+#include <Boot/console.h>
 
 EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable) {
 
