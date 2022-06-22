@@ -18,3 +18,5 @@ mediaOS is designed to run on x86_64 systems and on arm64 systems.
 
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
+Project started on 22.06.2022
