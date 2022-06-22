@@ -8,7 +8,7 @@ LD = ld
 
 OUTPUT_DIR = Output
 
-BOOTLOADER_CFLAGS =-fno-stack-protector -fpic -fshort-wchar -mno-red-zone -I /usr/include/efi/ -I /usr/include/efi/x86_64/ -DEFI_FUNCTION_WRAPPER
+BOOTLOADER_CFLAGS =-fno-stack-protector -fpic -fshort-wchar -mno-red-zone -I /usr/include/efi/ -I /usr/include/efi/x86_64/ -I Source/ -DEFI_FUNCTION_WRAPPER
 BOOTLOADER_LDFLAGS =/usr/lib/crt0-efi-x86_64.o -nostdlib -znocombreloc -T /usr/lib/elf_x86_64_efi.lds -shared -Bsymbolic -L /usr/lib/ -l:libgnuefi.a -l:libefi.a
 
 $(BOOTLOADER_OBJECT_FILES): Build/Boot/%.o : Source/Boot/%.c
