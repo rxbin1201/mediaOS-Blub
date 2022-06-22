@@ -14,10 +14,9 @@ BOOTLOADER_LDFLAGS =/usr/lib/crt0-efi-x86_64.o -nostdlib -znocombreloc -T /usr/l
 $(BOOTLOADER_OBJECT_FILES): Build/Boot/%.o : Source/Boot/%.c
 	mkdir -p $(dir $@) && \
 	$(CC) $(BOOTLOADER_CFLAGS) -c $(patsubst Build/Boot/%.o, Source/Boot/%.c, $@) -o $@
-	$(LD) $(patsubst Build/Boot/%.o, Source/Boot/%.c, $@) $(BOOTLOADER_LDFLAGS) -o BOOTX64.SO
+	$(LD) $@ $(BOOTLOADER_LDFLAGS) -o BOOTX64.SO
 
 .PHONY: bootloader
 bootloader: $(OBJECT_FILES)
 	mkdir -p $(OUTPUT_DIR)/EFI/BOOT/ && \
 	objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym -j .rel -j .rela -j .reloc --target=efi-app-x86_64 BOOTX64.SO $(OUTPUT_DIR)/EFI/BOOT/BOOTX64.EFI
-	
