@@ -6,7 +6,7 @@ VOID clearScreen(VOID) {
 }
 
 VOID changeFontColor(UINTN FOREGROUND) {
-    uefi_call_wrapper(ST->ConOut->SetAttribute, 1, ST->ConOut, FOREGROUND);
+    uefi_call_wrapper(ST->ConOut->SetAttribute, 2, ST->ConOut, FOREGROUND);
 }
 
 VOID setCursorPosition(UINTN x, UINTN y) {
