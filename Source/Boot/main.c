@@ -10,7 +10,7 @@ EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable) {
 
     clearScreen();
 
-    changeFontColor(EFI_LIGHTRED, EFI_BLACK);
+    changeFontColor(EFI_LIGHTRED);
 
     Print(L"Hello from mediaOS-Blub UEFI Bootloader!\n");
     Print(L"Now we have colors. AMAZING");
