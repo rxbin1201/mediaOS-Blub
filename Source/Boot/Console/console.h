@@ -6,7 +6,7 @@
 #include <efilib.h>
 
 VOID clearScreen(VOID);
-VOID changeFontColor(UINTN FOREGROUND, UINTN BACKGROUND);
+VOID changeFontColor(UINTN FOREGROUND);
 VOID setCursorPosition(UINTN x, UINTN y);
 
 #endif
